@@ -24,7 +24,7 @@ namespace DryIoCExample.Controllers
         }
 
         [HttpGet]
-        [Route("Get")]
+        //[Route("Get")]
         public async Task<IActionResult> Get()
         {
             return Ok(await _orderRepository.GetAll());
@@ -37,8 +37,7 @@ namespace DryIoCExample.Controllers
             return Ok(await _orderRepository.GetById(id));
         }
 
-        [HttpPost]
-        [Route("Post")]
+        [HttpPost]        
         public async Task<IActionResult> Post([FromBody] Order order)
         {
             order.Id = Guid.NewGuid();
