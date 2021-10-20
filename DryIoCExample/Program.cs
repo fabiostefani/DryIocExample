@@ -19,8 +19,7 @@ namespace DryIoCExample
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)                
-                // .UseDryIoc(DryIocExtensions.CreateMyPreConfiguredContainer())
+            Host.CreateDefaultBuilder(args)                                
                 .UseDryIoc()
                 .ConfigureWebHostDefaults(webBuilder =>
                 {

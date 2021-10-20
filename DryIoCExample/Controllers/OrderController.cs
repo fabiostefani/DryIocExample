@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using DryIoCExample.Entities;
 using DryIoCExample.Repository;
@@ -23,8 +21,7 @@ namespace DryIoCExample.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
-        //[Route("Get")]
+        [HttpGet]        
         public async Task<IActionResult> Get()
         {
             return Ok(await _orderRepository.GetAll());
